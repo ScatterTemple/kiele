@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "kiele"
+version = "0.1.0"
+description = ""
+authors = ["ScatterTemple <scatterlearning@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.1.3"
+matplotlib = {version = "^3.9.2", optional = true}
+
+[tool.poetry.extras]
+matplot = ["matplotlib"]
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+pytest = "^8.3.3"
+pip-licenses = "^5.0.0"
+pytest-cov = "^6.0.0"
+pytest-html = "^4.1.1"
+
+[tool.pytest.ini_options]
+markers = [
+    "sample",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
